@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management</title>
+</head>
+<body>
+
+<h2>Student Management System</h2>
+
+<input type="text" id="name" placeholder="Enter Name">
+<input type="number" id="age" placeholder="Enter Age">
+<button onclick="addStudent()">Add Student</button>
+
+<h3>Student List</h3>
+<ul id="list"></ul>
+
+<script>
+function addStudent() {
+    let name = document.getElementById("name").value;
+    let age = document.getElementById("age").value;
+
+    let li = document.createElement("li");
+    li.innerText = name + " - " + age;
+
+    document.getElementById("list").appendChild(li);
+}
+</script>
+
+</body>
+</html>
